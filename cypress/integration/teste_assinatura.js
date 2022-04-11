@@ -44,8 +44,8 @@ Continuar Assinatura = bfc_continuar
 ------------------------------
 
 */
-
-import 'cypress-file-upload';
+// Importando cypress-file-upload para fazer upload de arquivos
+// import 'cypress-file-upload';
 
 /* Adicionando comando Intelessense */
 /// <reference types="cypress" />
@@ -53,6 +53,11 @@ import 'cypress-file-upload';
 //describe para criar um grupo de testes que deve ser seguido de uma descrição, nome do grupo de testes, entre chaves o it para criar um teste
 describe('Devisp Assine', () => {
     it('Fazer assinatura, no devisp', () => {
+        
+        // const filepath1 = 'img/#01doc_selfie001.png'; // filepath do arquivo que será enviado
+        // const filepath2 = 'img/#02doc_selfie002.png'; // filepath do arquivo que será enviado
+        // const filepath3 = 'img/#03doc_selfie003.png'; // filepath do arquivo que será enviado
+
         //cy.visit para ir para a url
         cy.visit('https://devisp.datacake.com.br')
 
@@ -93,11 +98,13 @@ describe('Devisp Assine', () => {
         cy.get('#s02_select_contractTime').select('1 ano') //Fidelidade de 1 ano selecionado
         cy.get('#label_dueDay_10').click() //Dia de vencimento selecionado
         cy.get(':nth-child(4) > :nth-child(1) > .custom-control > .custom-control-label > span').click() //Forma de pagamento selecionado
-        cy.get('#s02-open-docs-modal').click() //Abrir documentos
+        // cy.get('#s02-open-docs-modal').click() //Abrir documentos
         // cy.get('#send_selfie').uploadFile('D:\\screenshots\\#01doc_selfie001.png') //Enviar selfie   #TODO preciso descobrir como enviar arquivos no cypress!
-        //cy.get('#send_selfie').as('fileInput').attachFile('D:\\screenshots\\#01doc_selfie001.png')
+        // cy.get('#send_selfie').attachFile(filepath1) //Enviar selfie
+        // cy.get('#file-submit').click()
+        // cy.get('#uploaded-files').contains('#01doc_selfie001.png')
         cy.get('#label_term-7').click() //Termos de uso selecionado
-        // cy.get('#s02-confirmar-assinatura').click() //Confirmar Assinatura
+        cy.get('#s02-confirmar-assinatura').click() //Confirmar Assinatura
     });
     
 });

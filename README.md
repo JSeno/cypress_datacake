@@ -19,6 +19,9 @@ Via NPM
 Ou via YARN
 - yarn add cypress --dev
 
+Habilitando o file upload
+- npm install --save-dev cypress-file-upload
+
 ### Abrindo o Cypress
 
 Criando um estrutura de pastas no cypress e abrindo o cypress
