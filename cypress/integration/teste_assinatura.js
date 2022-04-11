@@ -57,10 +57,10 @@ describe('Devisp Assine', () => {
         // Página 1 do assine
         //cy.get para buscar o elemento que no caso são os IDs dos campos, type para digitar o conteudo, click para clicar e clear para limpar o campo.
         // cy.get('[id=bfc_taxvat]').type('935.078.950-72') //CPF
-        cy.get('[id=bfc_name]').type('Teste de Assinatura') //Nome Completo
-        cy.get('[id=bfc_email]').type('testes@datacake.com.br') //Email
-        cy.get('[id=mobile_celular]').type('11 99999-9999') //Telefone celular
-        cy.get('[id=bfc_postalCode]').type('18680410') //Cep Instalação
+        cy.get('#bfc_name').type('Teste de Assinatura') //Nome Completo
+        cy.get('#bfc_email').type('testes@datacake.com.br') //Email
+        cy.get('#mobile_celular').type('11 99999-9999') //Telefone celular
+        cy.get('#bfc_postalCode').type('18680410') //Cep Instalação
         cy.get('#bfc_numberOfAddress').type('410') //Número da residência
         cy.get('#bfc_typeOfAccess').select('Residencial') //Tipo de acesso selecionado
         cy.get('#bfc_typeOfCustomer').select('Não sou cliente') //Já é cliente selecionado
