@@ -48,17 +48,29 @@ Continuar Assinatura = bfc_continuar
 /* Adicionando comando Intelessense */
 /// <reference types="cypress" />
 
-/* Decrição dos tipo de testes */
-describe('Ongs', () => {
-    it('devem poder realizar um cadastro', () => {
+//describe para criar um grupo de testes que deve ser seguido de uma descrição, nome do grupo de testes, entre chaves o it para criar um teste
+describe('Devisp Assine', () => {
+    it('Fazer assinatura, no devisp', () => {
+        //cy.visit para ir para a url
         cy.visit('https://devisp.datacake.com.br')
 
-        cy.get('[id=bfc_taxvat]').type('12345678901')
-        cy.get('[id=bfc_name]').type('Teste de Assinatura')
+        // Página 1 do assine
+        //cy.get para buscar o elemento que no caso são os IDs dos campos, type para digitar o conteudo, click para clicar e clear para limpar o campo.
+        // cy.get('[id=bfc_taxvat]').type('935.078.950-72') //CPF
+        cy.get('[id=bfc_name]').type('Teste de Assinatura') //Nome Completo
+        cy.get('[id=bfc_email]').type('testes@datacake.com.br') //Email
+        cy.get('[id=mobile_celular]').type('11 99999-9999') //Telefone celular
+        cy.get('[id=bfc_postalCode]').type('18680410') //Cep Instalação
+        cy.get('#bfc_numberOfAddress').type('410') //Número da residência
+        cy.get('#bfc_typeOfAccess').select('Residencial') //Tipo de acesso selecionado
+        cy.get('#bfc_typeOfCustomer').select('Não sou cliente') //Já é cliente selecionado
+        cy.get('#bfc_lgpd_disclaimer_label').click() //Aceite de Termos selecionado
+        cy.get('#bfc_continuar').click() //Continuar Assinatura
+
+        // Página 2 do assine
+
     });
     
-    it('devem poder realizar um login no sistema', () => {
-        });
 });
     
 
