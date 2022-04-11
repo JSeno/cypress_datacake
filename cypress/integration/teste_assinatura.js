@@ -95,6 +95,7 @@ describe('Devisp Assine', () => {
         cy.get(':nth-child(4) > :nth-child(1) > .custom-control > .custom-control-label > span').click() //Forma de pagamento selecionado
         cy.get('#s02-open-docs-modal').click() //Abrir documentos
         // cy.get('#send_selfie').uploadFile('D:\\screenshots\\#01doc_selfie001.png') //Enviar selfie   #TODO preciso descobrir como enviar arquivos no cypress!
+        //cy.get('#send_selfie').as('fileInput').attachFile('D:\\screenshots\\#01doc_selfie001.png')
         cy.get('#label_term-7').click() //Termos de uso selecionado
         // cy.get('#s02-confirmar-assinatura').click() //Confirmar Assinatura
     });
