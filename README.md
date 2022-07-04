@@ -1,4 +1,4 @@
-# aprendizado_cypress
+# Cypress que criado para iniciar testes no datacake, preciso atualizar e melhorar os testes.
 
 ###### Em contrução...
 
