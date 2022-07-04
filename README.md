@@ -33,3 +33,5 @@ e dentro desse arquivo adicione o comando no inicio dele `/// <reference types="
 
 Após isso inicie com o comando "describe" que é a função de descrição do testes e mapeie sua página de testes pegando os ids, classes,
 usando o inspetor de elementos. CYPRESS conta com seu próprio seletor "data-cy=id_do_campo" quando tiver procure usa-lo.
+
+Falta atualizar e melhorar esses testes.
